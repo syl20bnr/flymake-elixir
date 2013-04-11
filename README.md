@@ -7,9 +7,8 @@ Installation
 =============
 
 If you choose not to use one of the convenient packages in [Melpa][melpa],
-you'll need to add the directory containing `flymake-elixir.el` to your `load-path`,
-and then
-`(require 'flymake-elixir')`.
+you'll need to add the directory containing `flymake-elixir.el` to your
+`load-path`, and then `(require 'flymake-elixir')`.
 
 You'll also need to install:
 - [elixir-mode](https://github.com/elixir-lang/emacs-elixir).
@@ -28,4 +27,4 @@ Thanks
 - Steve Purcell for flymake-easy.el and the skeleton of this markdown.
 - Andreas Fuchs for the elixir major mode.
 
-		[melpa]: http://melpa.milkbox.net
+[melpa]: http://melpa.milkbox.net
