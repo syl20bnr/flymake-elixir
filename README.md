@@ -8,7 +8,7 @@ Installation
 
 If you choose not to use one of the convenient packages in [Melpa][melpa],
 you'll need to add the directory containing `flymake-elixir.el` to your
-`load-path`, and then `(require 'flymake-elixir')`.
+`load-path`, and then `(require 'flymake-elixir)`.
 
 You'll also need to install:
 - [elixir-mode](https://github.com/elixir-lang/emacs-elixir).
@@ -19,8 +19,8 @@ Usage
 
 Add the following to your emacs init file:
 
-    (require 'flymake-elixir')
-	    (add-hook 'elixir-mode-hook 'flymake-elixir-load)
+    (require 'flymake-elixir)
+	(add-hook 'elixir-mode-hook 'flymake-elixir-load)
 
 Thanks
 ======
