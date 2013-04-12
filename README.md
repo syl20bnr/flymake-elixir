@@ -21,6 +21,14 @@ Add the following to your emacs init file:
 
     (require 'flymake-elixir)
 	(add-hook 'elixir-mode-hook 'flymake-elixir-load)
+    
+Important note
+--------------
+
+In order to have the **special warning face** you need to install an
+updated version of flymake from [Marmalade][marmalade], you can also
+clone it and install it from
+[Sam Graham's repository](https://github.com/illusori/emacs-flymake).
 
 Thanks to
 ---------
@@ -28,3 +36,5 @@ Thanks to
 - Andreas Fuchs for the elixir major mode.
 
 [melpa]: http://melpa.milkbox.net
+[marmalade]: http://marmalade-repo.org
+
