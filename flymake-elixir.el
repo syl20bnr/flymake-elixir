@@ -1,4 +1,4 @@
-;;; flymake-elixir.el ---  A flymake handler for elixir-mode .ex files.     
+;;; flymake-elixir.el --- A flymake handler for elixir-mode .ex files.     
 ;;
 ;; Copyright (C) 2010-2013 Sylvain Benner
 ;;
