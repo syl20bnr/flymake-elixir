@@ -6,7 +6,8 @@ An Emacs flymake handler for syntax-checking elixir .ex source files.
 Installation
 ------------
 
-If you choose not to use one of the convenient packages in [Melpa][melpa],
+If you choose not to use one of the convenient packages in [Melpa][melpa]
+or [Marmalade][marmalade],
 you'll need to add the directory containing `flymake-elixir.el` to your
 `load-path`, and then `(require 'flymake-elixir)`.
 
