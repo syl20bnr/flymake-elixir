@@ -1,19 +1,37 @@
-;;; flymake-elixir.el --- a flymake handler for elixir-mode .ex files
+;;; flymake-elixir.el ---  A flymake handler for elixir-mode .ex files.     
 ;;
-;;; author: sylvain benner based on flymake-easy from steve purcell
-;;; url: https://github.com/syl20bnr/flymake-elixir
-;; version: 0.1
-;;; x-original-version: dev
-;;; package-requires: ((flymake-easy "0.1"))
-;;;
-;;; commentary:
-;; usage:
+;; Copyright (C) 2010-2013 Sylvain Benner
+;;
+;;; Author: Sylvain Benner <syl20bnr@gmail.com>
+;;; Created: 10 Apr 2013
+;; Version: 0.1
+;;; Package-Pequires: ((flymake-easy "0.1"))
+;;
+;; This file is not part of GNU Emacs.
+;;
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;; Commentary:
+;; Usage:
 ;;   (require 'flymake-elixir)
 ;;   (add-hook 'elixir-mode-hook 'flymake-elixir-load)
 ;;
-;; uses flymake-easy, from https://github.com/purcell/flymake-easy
+;; Based on flymake-ruby, from Steve Purcell
+;; Uses flymake-easy, from Steve Purcell
 
-;;; code:
+;;; Code:
+
 (require 'flymake-easy)
 
 (defconst flymake-elixir-err-line-patterns
@@ -24,11 +42,10 @@
 (defvar flymake-elixir-executable "elixirc"
   "The elixir executable to use for syntax checking.")
 
-;; Invoke elixir with '-c' to get syntax checking
 (defun flymake-elixir-command (filename)
   "Construct a command that flymake can use to check elixir source."
   (list flymake-elixir-executable
-        "--ignore-module-conflict"
+        "--ignore-module-conflict" ;; needed to prevent from module redefinition warning.
         "+warn_obsolete_guard"
         "+warn_unused_import"
         "+warn_shadow_vars"
