@@ -4,7 +4,7 @@
 ;;
 ;;; Author: Sylvain Benner <syl20bnr@gmail.com>
 ;;; Created: 10 Apr 2013
-;; Version: 0.2
+;; Version: 0.3
 ;;; Package-Pequires: ((flymake-easy "0.1"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -39,7 +39,8 @@
 (defconst flymake-elixir-err-line-patterns
   '(("^\\(** (.*) \\)?\\(.*\.ex\\):\\([0-9]+\\): \\(.*\\)$" 2 3 nil 4)))
 (defconst flymake-elixir-warn-regex
-  "\\(^redefining|^export_all|future reserved|deprecated|shadowed|obsolete$|unused$\\)")
+  (concat "\\(^redefining\\|^export_all\\|future reserved\\|deprecated\\|"
+          "shadowed\\|always matches$\\|obsolete$\\|unused$\\)"))
 
 (defvar flymake-elixir-executable "elixirc"
   "The elixir executable to use for syntax checking.")
