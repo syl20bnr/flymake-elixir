@@ -28,12 +28,6 @@
 ;;   (require 'flymake-elixir)
 ;;   (add-hook 'elixir-mode-hook 'flymake-elixir-load)
 ;;
-;; Important Note:
-;; With built-in flymake, warnings will appear as errors.
-;; In order to have the **warning face** working you need to install an updated
-;; version of flymake from Marmalade, you can also clone it and install it from
-;; Sam Graham's repository at https://github.com/illusori/emacs-flymake.
-;;
 ;; Based on flymake-ruby, from Steve Purcell
 ;;
 ;; Uses flymake-easy, from Steve Purcell
@@ -45,7 +39,7 @@
 (defconst flymake-elixir-err-line-patterns
   '(("^\\(** (.*) \\)?\\(.*\.ex\\):\\([0-9]+\\): \\(.*\\)$" 2 3 nil 4)))
 (defconst flymake-elixir-warn-regex
-  "\\(.*unused$\\)")
+  "\\(^redefining|^export_all|future reserved|deprecated|shadowed|obsolete$|unused$\\)")
 
 (defvar flymake-elixir-executable "elixirc"
   "The elixir executable to use for syntax checking.")
