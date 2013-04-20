@@ -39,8 +39,8 @@
 (defconst flymake-elixir-err-line-patterns
   '(("^\\(** (.*) \\)?\\(.*\.ex\\):\\([0-9]+\\): \\(.*\\)$" 2 3 nil 4)))
 (defconst flymake-elixir-warn-regex
-  (concat "\\(^redefining\\|^export_all\\|future reserved\\|deprecated\\|"
-          "shadowed\\|always matches$\\|obsolete$\\|unused$\\)"))
+  (regexp-opt (list "^redefining" "^export_all" "future reserved" "deprecated"
+                    "shadowed" "always matches$" "obsolete$" "unused$") t)
 
 (defvar flymake-elixir-executable "elixirc"
   "The elixir executable to use for syntax checking.")
@@ -48,7 +48,7 @@
 (defun flymake-elixir-command (filename)
   "Construct a command that flymake can use to check elixir source."
   (list flymake-elixir-executable
-        "--ignore-module-conflict" ;; needed to prevent from module redefinition warning.
+        "--ignore-module-conflict" ; needed to prevent from module redefinition warning.
         "+warn_obsolete_guard"
         "+warn_unused_import"
         "+warn_shadow_vars"
