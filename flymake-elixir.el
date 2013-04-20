@@ -4,7 +4,7 @@
 ;;
 ;;; Author: Sylvain Benner <syl20bnr@gmail.com>
 ;;; Created: 10 Apr 2013
-;; Version: 0.3
+;; Version: 0.4
 ;;; Package-Pequires: ((flymake-easy "0.1"))
 ;;
 ;; This file is not part of GNU Emacs.
