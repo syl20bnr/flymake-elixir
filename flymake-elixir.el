@@ -40,7 +40,7 @@
   '(("^\\(** (.*) \\)?\\(.*\.ex\\):\\([0-9]+\\): \\(.*\\)$" 2 3 nil 4)))
 (defconst flymake-elixir-warn-regex
   (regexp-opt (list "^redefining" "^export_all" "future reserved" "deprecated"
-                    "shadowed" "always matches$" "obsolete$" "unused$") t)
+                    "shadowed" "always matches$" "obsolete$" "unused$") t))
 
 (defvar flymake-elixir-executable "elixirc"
   "The elixir executable to use for syntax checking.")
